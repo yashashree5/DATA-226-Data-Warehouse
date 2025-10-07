@@ -20,7 +20,7 @@ Port the previous homework (#4) into **Apache Airflow**, implementing the ETL wo
 - Retrieve it in your DAG using:
   ```python
   from airflow.models import Variable
-  api_key = Variable.get("vantage_api_ke")
+  api_key = Variable.get("vantage_api_key")
   ```
 - Capture a screenshot of the Variables page.
 
@@ -79,5 +79,5 @@ Homeworks/
 ### 🧑‍💻 Author
 *Yashashree Shinde*  
 DATA-226: Data Warehouse  
-*Instructor: [Keeyong Han]*  
+*Instructor: Keeyong Han*  
 *Semester: Fall 2025*
