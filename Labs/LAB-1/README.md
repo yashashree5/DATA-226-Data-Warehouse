@@ -96,11 +96,9 @@ This confirms that both pipelines are correctly deployed and orchestrated within
 Include the following files in your repo:
 
 ```
-📂 project-root/
-├── dags/
+📂 LAB-1/
 │   ├── yfinance_etl.py
 │   ├── yfinance_train.py
-├── report/
 │   ├── StockPipeline_IEEE_Report.pdf
 ├── README.md
 ```
