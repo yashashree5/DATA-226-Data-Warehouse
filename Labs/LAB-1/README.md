@@ -40,8 +40,9 @@ Both pipelines must be orchestrated and managed using **Apache Airflow** as two 
                 +----------------+
                 | Airflow DAG 1: |
                 |  yfinance_etl  |
-                | (Extract,Transform, 
-                |   Load)|
+                | (Extract,      |
+                |  Transform,    |
+                |   Load)       |
                 +--------+-------+
                          |
                          v
