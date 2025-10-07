@@ -42,7 +42,7 @@ Both pipelines must be orchestrated and managed using **Apache Airflow** as two 
                 |  yfinance_etl  |
                 | (Extract,      |
                 |  Transform,    |
-                |   Load)       |
+                |   Load).       |
                 +--------+-------+
                          |
                          v
@@ -75,7 +75,7 @@ Both pipelines must be orchestrated and managed using **Apache Airflow** as two 
 
 ### 2️⃣ `yfinance_train`
 - Reads historical data from the database.  
-- Trains a machine learning model (ARIMA, Prophet, or Linear Regression) to forecast prices.  
+- Trains a machine learning model to forecast prices.  
 - Saves predicted results to the forecast table.  
 - Performs a **SQL transaction** to combine ETL and forecasted data into the final table.  
 - Also scheduled to run daily, **after** `yfinance_etl`.
