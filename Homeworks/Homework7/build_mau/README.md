@@ -1,15 +1,12 @@
-Welcome to your new dbt project!
-
-### Using the starter project
-
-Try running the following commands:
-- dbt run
-- dbt test
-
-
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+Create a dbt project with snowflake connector (1 pt)
+Set up Input models (2pt)
+Input tables should be built as CTE
+Show contents of models/input/user_session_channel.sql and input/session_timestamp.sql
+Set up Output models (1pt)
+Show contents of models/output/session_summary.sql
+Add Snapshot to the output table (session_summary) (2pt)
+Show contents of snapshots/snapshot_session_summary.sql
+Add at least 2 tests to sessionId field of session_summary (2pt)
+Show contents of models/schema.yml
+For each step, capture screenshots accordingly (Look at the examples in the slides - week 10 in files -> lecture notes)
+Create a github repo for this (the entire dbt project) and add the link to the report
