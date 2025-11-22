@@ -1,0 +1,13 @@
+-- Simple staging view
+SELECT
+    FORECAST_DATE,
+    MAX_TEMP,
+    MIN_TEMP,
+    PRECIPITATION,
+    WIND_SPEED,
+    -- Simple derived fields
+    (MAX_TEMP + MIN_TEMP) / 2.0 AS AVG_TEMP,
+    EXTRACT(YEAR FROM FORECAST_DATE) AS YEAR,
+    EXTRACT(MONTH FROM FORECAST_DATE) AS MONTH
+FROM {{ source('raw', 'weather_history') }}
+WHERE FORECAST_DATE IS NOT NULL

@@ -1,0 +1,37 @@
+version: 2
+
+sources:
+  - name: raw
+    database: USER_DB_PUMA
+    schema: raw
+    
+    tables:
+      - name: weather_history
+        description: "Daily weather history for San Francisco"
+        
+        columns:
+          - name: forecast_date
+            description: "Date of weather forecast"
+            tests:
+              - unique
+              - not_null
+          
+          - name: max_temp
+            description: "Maximum temperature in Celsius"
+            tests:
+              - not_null
+          
+          - name: min_temp
+            description: "Minimum temperature in Celsius"
+            tests:
+              - not_null
+          
+          - name: precipitation
+            description: "Total precipitation in millimeters"
+            tests:
+              - not_null
+          
+          - name: wind_speed
+            description: "Maximum wind speed in km/h"
+            tests:
+              - not_null

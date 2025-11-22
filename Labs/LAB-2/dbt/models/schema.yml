@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: stg_weather_history
+    description: "Staging model for weather history with derived fields"
+    columns:
+      - name: forecast_date
+        description: "Date of weather observation"
+        tests:
+          - unique
+          - not_null
+      - name: avg_temperature_c
+        description: "Average daily temperature"
+        tests:
+          - not_null
+
+  - name: weather_monthly_summary
+    description: "Monthly aggregations of weather data"
+    columns:
+      - name: month
+        description: "Month of aggregation"
+        tests:
+          - unique
+          - not_null
+      - name: avg_temp_c
+        tests:
+          - not_null
